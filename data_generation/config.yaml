@@ -1,0 +1,100 @@
+# Global settings
+project:
+ name: "Marketing Dashboard Dummy Data"
+ currency: "USD"
+ timezone: "UTC"
+
+date_range:
+ start: "2024-01-01"
+ end: "2024-12-31"
+ granularity: "daily"
+
+random_seed: 42
+
+# Channels & performance behavior
+channels:
+ Paid Search:
+   base_impressions: 20000
+   ctr_range: [0.03, 0.06]
+   cpc_range: [0.8, 1.5]
+   conversion_rate_range: [0.04, 0.10]
+
+ Paid Social:
+   base_impressions: 50000
+   ctr_range: [0.01, 0.025]
+   cpc_range: [0.5, 1.2]
+   conversion_rate_range: [0.02, 0.06]
+
+ Programmatic:
+   base_impressions: 120000
+   ctr_range: [0.002, 0.01]
+   cpc_range: [0.3, 0.8]
+   conversion_rate_range: [0.01, 0.03]
+
+ Organic:
+   base_impressions: 15000
+   ctr_range: [0.05, 0.12]
+   cpc_range: [0, 0]
+   conversion_rate_range: [0.05, 0.15]
+
+# Data sources (platforms)
+data_sources:
+ Paid Search:
+   - Google Ads
+   - Bing Ads
+  
+ Paid Social:
+   - Facebook Ads
+   - LinkedIn Ads
+  
+ Programmatic:
+   - StackAdapt
+   - Amazon Ad Server
+  
+ Organic:
+  - Goggle Organic
+
+# Campaign Setup
+campaigns:
+ Paid Search:
+   count: 4
+   objectives:
+     - Lead Generation
+     - Website Traffic
+
+ Paid Social:
+   count: 3
+   objectives:
+     - Brand Awareness
+     - Lead Generation
+
+ Programmatic:
+   count: 3
+   objectives:
+     - Brand Awareness
+
+ Organic:
+   count: 1
+   objectives:
+     - SEO Traffic
+
+# Seasonality & noise
+seasonality:
+ enabled: true
+ q4_multiplier: 1.25
+ summer_dip_multiplier: 0.9
+
+daily_variation:
+ std_dev: 0.15
+
+# Business rules
+rules:
+ organic_has_no_cost: true
+ min_clicks_before_conversions: 5
+ round_metrics: true
+
+# Anomalies (maybe i'll use it)
+anomalies:
+ enabled: False
+ spike_probability: 0.01
+ spike_multiplier: 2.5
