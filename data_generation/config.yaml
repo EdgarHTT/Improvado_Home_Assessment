@@ -91,7 +91,7 @@ daily_variation:
 rules:
  organic_has_no_cost: true
  min_clicks_before_conversions: 5
- round_metrics: true
+ round_metrics: true # Not used right now
 
 # Anomalies (maybe i'll use it)
 anomalies:
