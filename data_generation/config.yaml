@@ -14,25 +14,25 @@ random_seed: 42
 # Channels & performance behavior
 channels:
  Paid Search:
-   base_impressions: 20000
+   base_impressions: 200
    ctr_range: [0.03, 0.06]
    cpc_range: [0.8, 1.5]
    conversion_rate_range: [0.04, 0.10]
 
  Paid Social:
-   base_impressions: 50000
+   base_impressions: 500
    ctr_range: [0.01, 0.025]
    cpc_range: [0.5, 1.2]
    conversion_rate_range: [0.02, 0.06]
 
  Programmatic:
-   base_impressions: 120000
+   base_impressions: 1200
    ctr_range: [0.002, 0.01]
    cpc_range: [0.3, 0.8]
    conversion_rate_range: [0.01, 0.03]
 
  Organic:
-   base_impressions: 15000
+   base_impressions: 150
    ctr_range: [0.05, 0.12]
    cpc_range: [0, 0]
    conversion_rate_range: [0.05, 0.15]
@@ -81,11 +81,11 @@ campaigns:
 # Seasonality & noise
 seasonality:
  enabled: true
- q4_multiplier: 1.25
- summer_dip_multiplier: 0.9
+ q4_multiplier: 2.25
+ summer_dip_multiplier: 0.1
 
 daily_variation:
- std_dev: 0.15
+ std_dev: 10
 
 # Business rules
 rules:
