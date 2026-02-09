@@ -12,3 +12,7 @@ RETURN Arrow & " " & FORMAT(Result, "$##0,K")
 Red Indicator = #D64554
 Green Indicator = #1AAB40
 Neutral Indicator = #D9B300
+
+Up Arrow = ▲ unicode 9650
+Down Arrow = ▼ unicode 9660
+Right Arrow = ▶ unicode 9654
