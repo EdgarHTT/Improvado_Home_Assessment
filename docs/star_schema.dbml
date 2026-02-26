@@ -1,0 +1,43 @@
+Table fact_marketing_performance {
+  date_id integer [ref: > dim_date.date_id]
+  campaign_id integer [ref: > dim_campaign.campaign_id]
+  data_source_id integer [ref: > dim_data_source.data_source_id]
+  impressions integer
+  reach integer
+  clicks integer
+  video_views integer
+  cost float
+  conversions integer
+}
+
+Table dim_campaign {
+  campaign_id integer [primary key]
+  campaign_name string
+  channel_id int [ref: > dim_channel.channel_id]
+  objective string
+  start_date date
+  end_date date
+  status string
+}
+
+Table dim_channel {
+  channel_id integer [primary key]
+  channel_name string
+}
+
+Table dim_data_source {
+  data_source_id integer [primary key]
+  data_source_name string
+  platform_type string
+}
+
+Table dim_date {
+  date_id integer [primary key]
+  date date
+  day integer
+  month integer
+  month_name string
+  quarter integer
+  year integer
+  week integer
+}
